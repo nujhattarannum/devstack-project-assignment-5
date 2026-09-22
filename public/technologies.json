@@ -1,0 +1,134 @@
+[
+  {
+    "id": "react",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    "badge": "Popular",
+    "name": "React",
+    "description": "A declarative, component-based JavaScript library for building modern user interfaces.",
+    "category": "Frontend",
+    "difficulty": "Beginner-Friendly",
+    "rating": 4.9,
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": "vue",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+    "badge": "Versatile",
+    "name": "Vue.js",
+    "description": "An approachable, performant, and versatile framework for building web user interfaces.",
+    "category": "Frontend",
+    "difficulty": "Beginner-Friendly",
+    "rating": 4.8,
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": "svelte",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg",
+    "badge": "Fast",
+    "name": "Svelte",
+    "description": "Cybernetically enhanced web apps with compile-time reactivity and zero virtual DOM overhead.",
+    "category": "Frontend",
+    "difficulty": "Intermediate",
+    "rating": 4.8,
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": "nextjs",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    "badge": null,
+    "name": "Next.js",
+    "description": "The React framework for full-stack web applications with hybrid static & server rendering.",
+    "category": "Frontend",
+    "difficulty": "Intermediate",
+    "rating": 4.9,
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": "nodejs",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    "badge": "Standard",
+    "name": "Node.js",
+    "description": "An asynchronous event-driven JavaScript runtime built on Chrome's V8 engine.",
+    "category": "Backend",
+    "difficulty": "Intermediate",
+    "rating": 4.8,
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": "postgresql",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+    "badge": "Top SQL",
+    "name": "PostgreSQL",
+    "description": "A powerful, open-source object-relational database system with proven reliability.",
+    "category": "Database",
+    "difficulty": "Intermediate",
+    "rating": 4.9,
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": "redis",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+    "badge": "Cache",
+    "name": "Redis",
+    "description": "In-memory data structure store used as a high-speed database, cache, and message broker.",
+    "category": "Database",
+    "difficulty": "Intermediate",
+    "rating": 4.8,
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": "javascript",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    "badge": "Ubiquitous",
+    "name": "JavaScript",
+    "description": "The versatile, ubiquitous scripting language powering dynamic behavior across the web.",
+    "category": "Language",
+    "difficulty": "Beginner-Friendly",
+    "rating": 4.9,
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": "typescript",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    "badge": "Essential",
+    "name": "TypeScript",
+    "description": "A strongly typed programming language that builds on JavaScript for robust tooling.",
+    "category": "Language",
+    "difficulty": "Intermediate",
+    "rating": 4.9,
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": "java",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+    "badge": "Robust",
+    "name": "Java",
+    "description": "A secure, object-oriented programming language designed for portability and scale.",
+    "category": "Language",
+    "difficulty": "Intermediate",
+    "rating": 4.6,
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": "tailwindcss",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+    "badge": "Modern",
+    "name": "Tailwind CSS",
+    "description": "A utility-first CSS framework packed with classes that can be composed to build custom UI.",
+    "category": "Styling",
+    "difficulty": "Beginner-Friendly",
+    "rating": 4.9,
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": "docker",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    "badge": "Containers",
+    "name": "Docker",
+    "description": "A platform designed to build, share, and run containerized applications reliably.",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "rating": 4.9,
+    "buttonText": "Add to Stack"
+  }
+]
