@@ -1,6 +1,15 @@
+import { use } from "react";
+import type { ITechnology } from "../types/techtype";
 
+interface ITechnologyProps{
+    technologiesPromise : Promise<ITechnology[]>;
+}
 
-const Technology = () => {
+const Technology = ({technologiesPromise}: ITechnologyProps) => {
+      
+const data = use(technologiesPromise);
+         console.log(data ,"data");
+
     return (
     <section className=" container mx-auto py-4 px-20">
             <h2 className="text-2xl font-bold">Explore the <span className=" text-fuchsia-500">Technologies</span> </h2>
