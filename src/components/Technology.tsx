@@ -26,7 +26,7 @@ const data = use(technologiesPromise);
     }
 
     setStack([...stack, item]);
-        toast(`${item.id} added to cart !`);
+        toast.success(`${item.id} added to cart !`);
 };
 
         {/* for removing item*/}
@@ -34,7 +34,7 @@ const data = use(technologiesPromise);
     const handleRemoveFromStack = (item: ITechnology) => {
          
         setStack(stack.filter((item) => item.id !== item.id));
-        toast(`${item.id} is removed from your stack!` );
+        toast.success(`${item.id} is removed from your stack!` );
          
     };
 
@@ -42,7 +42,7 @@ const data = use(technologiesPromise);
          
        const handleRemoveAll = () => {
            setStack([]);
-             toast(`all items removed from your stack!` );
+             toast.success(`all items removed from your stack!` );
        };
        
     return (
