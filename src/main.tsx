@@ -6,6 +6,7 @@ import Banner from './components/Banner'
 import Technology from './components/Technology'
 import type { ITechnology } from './types/techtype'
 import Footer from './components/Footer'
+import { ToastContainer } from 'react-toastify'
 
 
 const technologyFetch = async () : Promise<ITechnology[]> => {
@@ -22,5 +23,6 @@ createRoot(document.getElementById('root')!).render(
   <Banner/>
   <Technology technologiesPromise={technologiesPromise}/>
   <Footer/>
+   <ToastContainer/>
   </StrictMode>,
 )

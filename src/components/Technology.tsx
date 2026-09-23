@@ -1,5 +1,6 @@
 import { use,useState } from "react";
 import type { ITechnology } from "../types/techtype";
+import { toast } from "react-toastify";
 
 interface ITechnologyProps{
     technologiesPromise : Promise<ITechnology[]>;
@@ -20,23 +21,28 @@ const data = use(technologiesPromise);
     );
 
     if (alreadyExists) {
-        alert("This technology is already in your stack!");
+        toast.warning(`${item.id} is already in your stack!` );
         return;
     }
 
     setStack([...stack, item]);
+        toast(`${item.id} added to cart !`);
 };
 
         {/* for removing item*/}
      
-    const handleRemoveFromStack = (id: string) => {
-        setStack(stack.filter((item) => item.id !== id));
+    const handleRemoveFromStack = (item: ITechnology) => {
+         
+        setStack(stack.filter((item) => item.id !== item.id));
+        toast(`${item.id} is removed from your stack!` );
+         
     };
 
          {/* for removing  All item*/}
          
        const handleRemoveAll = () => {
            setStack([]);
+             toast(`all items removed from your stack!` );
        };
        
     return (
@@ -83,13 +89,14 @@ const data = use(technologiesPromise);
                                                 {item.rating}
                                                      </span>
                               </div>
-
-                         <button onClick={() => handleAddToStack(item)} disabled={isAdded}
+  
+                         <button onClick={() => handleAddToStack(item)} 
+                                disabled={isAdded}
                              className={`text-xl border rounded-2xl px-10 py-4 
                                 ${ isAdded ? "bg-gray-400 text-white cursor-not-allowed" : "bg-slate-950 text-gray-100" }`}>
                             {isAdded ? "✓ Added to Stack" : "Add to Stack"}
                         </button>
-
+            
                         </div>
                     
                        );
@@ -146,7 +153,7 @@ const data = use(technologiesPromise);
 
                         </div>
 
-                        <button onClick={() => handleRemoveFromStack(item.id)}
+                        <button onClick={() => handleRemoveFromStack(item)}
                             className="text-gray-500 font-bold">
                             ✕
                         </button>
