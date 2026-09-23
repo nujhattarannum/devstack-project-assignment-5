@@ -48,19 +48,19 @@ const data = use(technologiesPromise);
     return (
     <section className=" container mx-auto px-4 py-6 text-center md:py-4 md:px-10 md:text-left">
         
-            <h2 className=" text-2xl font-bold mb-2 md:text-4xl ">Explore the <span className=" text-fuchsia-500">Technologies</span> </h2>
-            <p  className=" text-gray-500 text-sm font-normal mb-6 md:text-xl md:mb-10">
+            <h2 className =" text-2xl font-bold mb-2 md:text-4xl "> Explore the <span className = "brand-gradient-text">Technologies</span> </h2>
+            <p  className =" text-gray-500 text-sm font-normal mb-6 md:text-xl md:mb-10">
                 Pick one technology per category to build your ideal stack.</p>
       
            
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+        <div className ="grid grid-cols-1 lg:grid-cols-4 gap-4">
 
-              <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 ">
-                { 
-                data.map( (item) => {
-                     const isAdded = stack.some( (stackItem) => stackItem.id === item.id );
-                       return (
-                        <div className="flex flex-col justify-between gap-3 rounded-2xl m-3 border border-slate-300 bg-white p-4 shadow-xs transition-shadow hover:shadow-md" >
+          <div className ="lg:col-span-3 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 ">
+              { 
+            data.map( (item) => {
+                 const isAdded = stack.some( (stackItem) => stackItem.id === item.id );
+                   return (
+                       <div className="flex flex-col justify-between gap-3 rounded-2xl m-3 border border-slate-300 bg-white p-4 shadow-xs transition-shadow hover:shadow-md" >
                         {/* Card Top Container */}
 <div>
   {/* Mobile View: Icon + Name side-by-side | Desktop View: Icon top left, Badge top right */}
@@ -79,8 +79,8 @@ const data = use(technologiesPromise);
   </div>
 
   {/* Title visible below icon ONLY on desktop */}
-  <h2 className="mt-3 hidden text-2xl font-bold text-slate-950 md:block">{item.name}</h2>
-</div>
+                        <h2 className="mt-3 hidden text-2xl font-bold text-slate-950 md:block">{item.name}</h2>
+                     </div>
                                <p className=" text-sm text-gray-500 text-left mb-4  md:text-md" >{item.description}</p>
                          <div className="flex items-center justify-between gap-2 text-xs">
   
@@ -121,9 +121,7 @@ const data = use(technologiesPromise);
         Your Stack
     </h2>
 
-
     {stack.length === 0 ? (
-       
        <div >
          <p className="text-md text-gray-500 mb-4">
         No Technologies Selected yet
@@ -138,19 +136,14 @@ const data = use(technologiesPromise);
         <>
             <div className="flex flex-col gap-3">
                 <p className="text-md text-gray-500 mb-4">
-        {stack.length} Technology Selected
-    </p>
-                {stack.map((item) => (
+        {stack.length} Technology Selected </p>
 
-                    <div
-                        key={item.id}
-                        className="flex items-center justify-between border rounded-xl p-3  border-gray-200 shadow "
-                    >
+                {stack.map((item) => (
+                    <div key={item.id} className="flex items-center justify-between border rounded-xl p-3  border-gray-200 shadow " >
 
                         <div className="flex items-center gap-3">
 
-                            <img src = {item.icon} alt={item.name} className="w-8 h-8"  />
-
+                            <img src = {item.icon} alt={item.name} className="w-8 h-8" />
                             <div>
                                 <h3 className=" text-md font-semibold">
                                     {item.name}
@@ -164,26 +157,21 @@ const data = use(technologiesPromise);
                         </div>
 
                         <button onClick={() => handleRemoveFromStack(item)}
-                            className="text-gray-500 font-bold">
-                            ✕
+                            className="text-gray-500 font-bold"> ✕
                         </button>
 
                     </div>
-
                 ))}
-
             </div>
 
-            <button
-                onClick={handleRemoveAll}
+            <button onClick={handleRemoveAll}
                 className="w-full mt-16 border border-red-500 font-semibold rounded-xl bg-gray-50 px-4 py-3 text-red-500">
                 Remove All
             </button>
         </>
-
     )}
 
-</div>
+        </div>
                    
           </div>
     </section>
