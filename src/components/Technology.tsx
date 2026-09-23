@@ -46,45 +46,55 @@ const data = use(technologiesPromise);
        };
        
     return (
-    <section className=" container mx-auto py-4 px-20">
-            <h2 className="text-4xl font-bold mb-2">Explore the <span className=" text-fuchsia-500">Technologies</span> </h2>
-            <p  className=" text-xl text-gray-500 font-normal mb-10">Pick one technology per category to build your ideal stack.</p>
-
+    <section className=" container mx-auto px-4 py-6 text-center md:py-4 md:px-10 md:text-left">
+        
+            <h2 className=" text-2xl font-bold mb-2 md:text-4xl ">Explore the <span className=" text-fuchsia-500">Technologies</span> </h2>
+            <p  className=" text-gray-500 text-sm font-normal mb-6 md:text-xl md:mb-10">
+                Pick one technology per category to build your ideal stack.</p>
+      
            
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
 
-              <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6">
+              <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 ">
                 { 
                 data.map( (item) => {
                      const isAdded = stack.some( (stackItem) => stackItem.id === item.id );
                        return (
-                        <div className="flex flex-col justify-between gap-3 rounded-2xl border border-slate-300 bg-white p-4 shadow-xs transition-shadow hover:shadow-md" >
-                        <div >
-                             <div className="flex justify-between items-center mb-4">
-                                   <img src={item.icon} alt = {item.name} className="w-8 h-8"></img>
-                             {item.badge && ( <span className={`rounded-full px-3 py-1 text-xs font-medium ${item.badgeColor}`}>
-                                   {item.badge}
-                                 </span>
-                                )}
-                              
-                            </div>
-                               <h2 className="  text-slate-950 text-2xl font-bold mb-2">{item.name}</h2>
-                               <p className="text-md text-gray-500 " >{item.description}</p>
-                        </div>
+                        <div className="flex flex-col justify-between gap-3 rounded-2xl m-3 border border-slate-300 bg-white p-4 shadow-xs transition-shadow hover:shadow-md" >
+                        {/* Card Top Container */}
+<div>
+  {/* Mobile View: Icon + Name side-by-side | Desktop View: Icon top left, Badge top right */}
+  <div className="flex items-center justify-between gap-2">
+    <img src={item.icon} alt={item.name} className="h-8 w-8 object-contain" />
 
+    {/* Title visible beside icon ONLY on mobile */}
+    <h2 className="text-base font-bold text-slate-950 md:hidden">{item.name}</h2>
+
+    {/* Badge aligned to the right */}
+    {item.badge && (
+      <span className={`shrink-0 rounded-full px-3 py-1 text-xs font-medium ${item.badgeColor}`}>
+        {item.badge}
+      </span>
+    )}
+  </div>
+
+  {/* Title visible below icon ONLY on desktop */}
+  <h2 className="mt-3 hidden text-2xl font-bold text-slate-950 md:block">{item.name}</h2>
+</div>
+                               <p className=" text-sm text-gray-500 text-left mb-4  md:text-md" >{item.description}</p>
                          <div className="flex items-center justify-between gap-2 text-xs">
   
-                         <span className="shrink-0 rounded-lg bg-slate-100/80 px-2.5 py-1 font-medium text-slate-700">
+                         <span className="shrink-0 rounded-lg bg-slate-100/80 px-2.5 py-1 font-medium text-gray-500">
                                 {item.category}
                           </span>
 
 
-                         <span className="truncate text-center text-slate-500">
+                         <span className="truncate text-center text-gray-500">
                                       {item.difficulty}
                            </span>
 
  
-                              <span className="flex shrink-0 items-center gap-1 font-bold text-gray-700">
+                              <span className="flex shrink-0 items-center gap-1 font-bold text-gray-600">
                                            <span className="text-amber-400">★</span>
                                                 {item.rating}
                                                      </span>
