@@ -60,7 +60,7 @@ const data = use(technologiesPromise);
             data.map( (item) => {
                  const isAdded = stack.some( (stackItem) => stackItem.id === item.id );
                    return (
-                       <div className="flex flex-col justify-between gap-3 rounded-2xl m-3 border border-slate-300 bg-white p-4 shadow-xs transition-shadow hover:shadow-md" >
+                       <div className="flex flex-col justify-between gap-3 rounded-2xl m-3 border border-slate-300 bg-white p-4 shadow-xs transition-all duration-300 hover:-translate-y-2 hover:shadow-md" >
                         {/* Card Top Container */}
 <div>
   {/* Mobile View: Icon + Name side-by-side | Desktop View: Icon top left, Badge top right */}
@@ -99,14 +99,16 @@ const data = use(technologiesPromise);
                                                 {item.rating}
                                                      </span>
                               </div>
-  
+                            
+                        
+                      
                          <button onClick={() => handleAddToStack(item)} 
                                 disabled={isAdded}
                              className={`text-xl border rounded-2xl px-10 py-4 
-                                ${ isAdded ? "bg-gray-400 text-white cursor-not-allowed" : "bg-slate-950 text-gray-100" }`}>
+                                ${ isAdded ? "whitespace-nowrap border-2 border-pink-500 bg-pink-100 cursor-not-allowed" : "bg-slate-950 text-gray-100" }`}>
                             {isAdded ? "✓ Added to Stack" : "Add to Stack"}
                         </button>
-            
+        
                         </div>
                     
                        );
