@@ -2,7 +2,8 @@ import Logo from "../assets/logo-text.png"
 
 const Navbar = () => {
     return (
-        <nav className="container mx-auto border-b border-b-gray-100 px-4 py-3 md:px-10 md:py-4">
+        <header className="sticky top-0 z-50 w-full border-b border-b-gray-100 bg-white/95 backdrop-blur-md">
+        <nav className="container mx-auto px-4 py-3 lg:px-10 md:py-4">
 
             {/* Mobile Navbar */}
             <div className="grid grid-cols-3 items-center md:hidden">
@@ -86,6 +87,7 @@ const Navbar = () => {
             </div>
 
         </nav>
+        </header>
     );
 };
 

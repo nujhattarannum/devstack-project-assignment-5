@@ -21,7 +21,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
   <Navbar/>
   <Banner/>
-  <Suspense fallback ={ <div className =" font-bold text-4xl text-center">  Loading Technologies...</div>}>
+  <Suspense fallback ={ <div className =" font-bold text-4xl text-fuchsia-500 text-center">  Loading Technologies...</div>}>
   <Technology technologiesPromise={technologiesPromise}/>
   </Suspense>
   <Footer/>
