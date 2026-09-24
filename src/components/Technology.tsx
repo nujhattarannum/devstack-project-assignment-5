@@ -103,7 +103,6 @@ const data = use(technologiesPromise);
                         
                       
                          <button onClick={() => handleAddToStack(item)} 
-                                disabled={isAdded}
                              className={`text-xl border rounded-2xl px-10 py-4 
                                 ${ isAdded ? "whitespace-nowrap border-2 border-pink-500 bg-pink-100 cursor-not-allowed" : "bg-slate-950 text-gray-100" }`}>
                             {isAdded ? "✓ Added to Stack" : "Add to Stack"}
